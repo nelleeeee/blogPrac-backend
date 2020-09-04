@@ -1,0 +1,33 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "blogPrac-backend",
+  "main": "index.js",
+  "repository": "https://github.com/nelleeeee/blogPrac-backend.git",
+  "author": "kkh",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.5",
+    "@prisma/cli": "2.6.1",
+    "@prisma/client": "2.6.1",
+    "dotenv": "^8.2.0",
+    "graphql-tools": "^6.2.0",
+    "graphql-yoga": "^1.18.3",
+    "jsonwebtoken": "^8.5.1",
+    "merge-graphql-schemas": "^1.7.8",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.4.11",
+    "nodemailer-sendgrid-transport": "^0.2.0",
+    "nodemon": "^2.0.4",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0"
+  },
+  "scripts": {
+    "dev": "nodemon --exec babel-node src/server.js",
+    "mig": "yarn prisma migrate save --experimental && yarn prisma migrate up --experimental && yarn prisma generate",
+    "stu": "yarn prisma studio --experimental"
+  }
+}

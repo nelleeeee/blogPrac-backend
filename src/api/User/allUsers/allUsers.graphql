@@ -1,0 +1,7 @@
+type Query {
+  allUsers: [User!]!
+}
+
+type Query {
+  userById(id: String!): User!
+}
