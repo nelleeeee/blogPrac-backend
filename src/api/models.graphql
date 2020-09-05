@@ -26,6 +26,7 @@ type Post {
   authorId: Int!
   comments: [Comment!]!
   files: [File]
+  text: String!
 }
 
 type Category {

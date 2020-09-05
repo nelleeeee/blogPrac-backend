@@ -1,7 +1,7 @@
 export default {
   Mutation: {
     createUser: async (_, args, { prisma }) => {
-      const { name, email, loginSecret = "" } = args;
+      const { name, email } = args;
       const exist = await prisma.user.findMany({
         where: { OR: [{ name }, { email }] },
       });
@@ -13,7 +13,7 @@ export default {
         }
       }
       return await prisma.user.create({
-        data: { name, email, loginSecret },
+        data: { name, email },
       });
     },
   },

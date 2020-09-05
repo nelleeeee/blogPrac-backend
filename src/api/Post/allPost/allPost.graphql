@@ -1,0 +1,7 @@
+type Query {
+  allPost: [Post!]!
+}
+
+type Category {
+  Category: [Category!]!
+}
