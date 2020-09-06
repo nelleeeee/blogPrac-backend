@@ -1,6 +1,9 @@
 export default {
   Query: {
-    allPost: async (_, __, { prisma }) => await prisma.post.findMany(),
+    detailPost: async (_, args, { prisma }) => {
+      const { id } = args;
+      return await prisma.post.findOne({ where: { id } });
+    },
   },
   Post: {
     categories: async (parent, __, { prisma }) => {
@@ -11,5 +14,3 @@ export default {
     },
   },
 };
-
-// 중괄호랑 리턴이랑 무슨관계?

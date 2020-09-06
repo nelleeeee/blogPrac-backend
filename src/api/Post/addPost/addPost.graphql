@@ -1,0 +1,9 @@
+type Mutation {
+  addPost(
+    title: String!
+    published: Boolean!
+    categories: [String]
+    text: String
+    files: [String]
+  ): Post!
+}

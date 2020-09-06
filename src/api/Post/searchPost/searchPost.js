@@ -1,3 +1,4 @@
+// 검색어가 글쓴이 제목 내용 카테고리에 포함되면 리턴
 export default {
   Query: {
     searchpost: async (_, args, { prisma }) =>
@@ -26,7 +27,7 @@ export default {
             {
               // 다대다 관계에서의 쿼리문
               categories: {
-                some: { category: { name: { contains: args.term } } },
+                some: { name: args.term },
               },
             },
           ],

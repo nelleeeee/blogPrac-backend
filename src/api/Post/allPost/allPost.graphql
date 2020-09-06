@@ -1,7 +1,4 @@
 type Query {
   allPost: [Post!]!
-}
-
-type Category {
-  Category: [Category!]!
+  categories(postId: Int!): [Category]
 }
