@@ -9,6 +9,12 @@ export default {
     comments: async (parent, __, { prisma }) => {
       return await prisma.comment.findMany({ where: { postId: parent.id } });
     },
+    files: async (parent, __, { prisma }) => {
+      return await prisma.file.findMany({ where: { postId: parent.id } });
+    },
+    // user: async (parent, __, { prisma }) => {
+    //   return await prisma.user.findMany({ where: { authorId: parent.id } });
+    // },
   },
 };
 
